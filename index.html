@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Chopin's Heart</title>
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <script src="script.js" defer></script>
+  <script src="game.js" defer></script>
+</head>
+
+<body>
+  <div id="app">
+
+    <!-- GAME SCREEN -->
+    <div id="game-frame">
+      <main id="game-stage">
+
+        <!-- PROGRESS BAR -->
+        <aside id="progress-bar" aria-label="Progress">
+          <button class="progress-jar" type="button" aria-label="Room 1 progress">
+            <img src="assets/game/ui/jar-empty 1.png" alt="" />
+          </button>
+
+          <button class="progress-jar" type="button" aria-label="Room 2 progress">
+            <img src="assets/game/ui/jar-empty 1.png" alt="" />
+          </button>
+
+          <button class="progress-jar" type="button" aria-label="Room 3 progress">
+            <img src="assets/game/ui/jar-empty 1.png" alt="" />
+          </button>
+
+          <button class="progress-jar" type="button" aria-label="Room 4 progress">
+            <img src="assets/game/ui/jar-empty 1.png" alt="" />
+          </button>
+
+          <button class="progress-jar" type="button" aria-label="Room 5 progress">
+            <img src="assets/game/ui/jar-empty 1.png" alt="" />
+          </button>
+        </aside>
+
+        <header id="game-header">
+          <div id="game-title">·· 47 Nowy Świat Apartment (1850) ··</div>
+        </header>
+
+        <section id="rooms-board" aria-label="Room selection screen"></section>
+
+        <footer id="game-footer">
+          <div id="game-quote">
+            Where your treasure is, there will your heart be also.
+          </div>
+        </footer>
+      </main>
+    </div>
+
+    <!-- ENDING ANIMATION -->
+    <div id="ending-stage" class="ui-hidden" aria-label="Ending animation">
+      <canvas id="ending-canvas"></canvas>
+      <button id="ending-restart-button" class="ui-hidden" type="button" aria-label="Start Over"></button>
+    </div>
+
+    <!-- INTRO / SCROLL ANIMATION -->
+    <div id="intro-stage">
+      <canvas id="intro-canvas"></canvas>
+
+      <button id="start-button" class="ui-hidden" type="button" aria-label="Begin"></button>
+
+      <div id="scroll-hint" class="ui-hidden">
+        Scroll
+      </div>
+
+      <button id="continue-button" class="ui-hidden" type="button">
+        CONTINUE
+      </button>
+
+      <div id="loading-screen">
+        <div class="loading-box">
+          <div class="loading-label">Loading...</div>
+
+          <div class="loading-bar">
+            <div id="loading-bar-fill" class="loading-bar-fill"></div>
+          </div>
+
+          <div id="loading-text" class="loading-percent">0%</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
